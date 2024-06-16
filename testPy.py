@@ -1,11 +1,35 @@
-import myDefs
-
+# import myDefs
+import subprocess
+import os
+# import filedialog module
+from tkinter import filedialog
 # Python program to create 
 # a file explorer in Tkinter
   
 # import all components
 # from the tkinter library
 from tkinter import *
+
+#defs
+# Function for opening the 
+# file explorer window
+def browseFolderPath(foldername):
+    """  TO launch explorer & READ files 
+    filename = filedialog.askopenfilename(initialdir = "/",
+                                          title = "Select a File",
+                                          filetypes = (("Text files",
+                                                        "*.txt*"),
+                                                       ("all files",
+                                                        "*.*")))
+    """
+    # returns the folder name 
+    foldername = filedialog.askdirectory(initialdir= "/")
+
+    # Change label contents
+    label_file_explorer.configure(text="File Opened: "+ foldername)
+
+def launchshell():
+    os.system("Robocopy " + srcname + " " + desname + " *.* /s /e /xo")
 
 # Create the root window
 window = Tk()
@@ -19,7 +43,9 @@ window.geometry("200x200")
 #Set window background color
 window.config(background = "white")
 
-  
+srcname = "C:\\Users\\kvinr\\Documents\\karthik\\Work\\Code\\Python\\RunTest\\src"
+desname = "C:\\Users\\kvinr\\Documents\\karthik\\Work\\Code\\Python\\RunTest\\des"
+
 # Create a File Explorer label
 label_file_explorer = Label(window, 
                             text = "File Explorer - Tkinter",
@@ -29,15 +55,16 @@ label_file_explorer = Label(window,
       
 button_sourcefold = Button(window, 
                         text = "Source Folder",
-                        command = myDefs.browseFolderPath) 
+                        command = browseFolderPath(srcname)) 
 
 button_destfold = Button(window, 
                         text = "Dest Folder",
-                        command = myDefs.browseFolderPath) 
+                        command = browseFolderPath(desname)) 
 
 button_launchshell = Button(window,
                         text = " Robocopy",
-                        command = myDefs.launchshell)  
+                        command = launchshell)  
+
 
 button_exit = Button(window, 
                      text = "Exit",

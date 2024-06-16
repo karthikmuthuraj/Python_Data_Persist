@@ -1,10 +1,7 @@
 import subprocess
+import os
 # import filedialog module
 from tkinter import filedialog
-
-def launchshell():
-    file1 = subprocess.run(["dir"])
-    print("The exit code was: %d" % file1.returncode)
 
 # Function for opening the 
 # file explorer window
@@ -21,4 +18,8 @@ def browseFolderPath():
     foldername = filedialog.askdirectory(initialdir= "/")
 
     # Change label contents
-    # label_file_explorer.configure(text="File Opened: "+ foldername)      
+    # label_file_explorer.configure(text="File Opened: "+ foldername)
+
+
+def launchshell():
+    os.system(" start chrome")
