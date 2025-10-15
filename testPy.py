@@ -8,15 +8,28 @@ print("IN:")
 print("---")
 
 # test1 = myDefs.readLine()
-intime = time.time()
-test2 = myDefs.readandwriteFile()
-outtime = time.time()
+intime0 = time.time()
+test0 = myDefs.readandwriteFile()
+outtime0 = time.time()
+
+intime1 = time.time()
+test1 = myDefs.readandwriteFile()
+outtime1 = time.time()
 
 print("OUT:")
 print("----")
 
-print(intime)
-print(outtime)
 # print(test1)
-if (test2 == "SUCCESS"):
-    print ("TIME - file Read-Write : \n", outtime-intime)
+if (test0 == "SUCCESS"):
+    print ("SIMPLE:TIME - file Read-Write : ",outtime0-intime0)
+
+
+if (test1 == "SUCCESS"):
+    print ("OS:TIME - file Read-Write : ",outtime1-intime1)
+
+
+if ((outtime0-intime0) < (outtime1-intime1) ):
+    print ("SIMPLE time function is faster ")
+else:
+    print ("OS time function is faster")
+
