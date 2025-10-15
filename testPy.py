@@ -23,11 +23,10 @@ print("----")
 if (test0 == "SUCCESS"):
     print ("SIMPLE:TIME - file Read-Write : ",outtime0-intime0)
 
-
 if (test1 == "SUCCESS"):
     print ("OS:TIME - file Read-Write : ",outtime1-intime1)
 
-
+# update user based on the quickest time.
 if ((outtime0-intime0) < (outtime1-intime1) ):
     print ("SIMPLE time function is faster ")
 else:
