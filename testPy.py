@@ -1,86 +1,15 @@
-# import myDefs
-import subprocess
-import os
-# import filedialog module
-from tkinter import filedialog
-# Python program to create 
-# a file explorer in Tkinter
-  
-# import all components
-# from the tkinter library
-from tkinter import *
+# execution routine.
+from array import *
 
-#defs
-# Function for opening the 
-# file explorer window
-def browseFolderPath(foldername):
-    """  TO launch explorer & READ files 
-    filename = filedialog.askopenfilename(initialdir = "/",
-                                          title = "Select a File",
-                                          filetypes = (("Text files",
-                                                        "*.txt*"),
-                                                       ("all files",
-                                                        "*.*")))
-    """
-    # returns the folder name 
-    foldername = filedialog.askdirectory(initialdir= "/")
+print("ARRAYs")
+print('------')
+# basic operations of an array
+# Traverse / insertion / deletion / search / update
 
-    # Change label contents
-    label_file_explorer.configure(text="File Opened: "+ foldername)
+array2= array('i', [10,20,30])      # define an array
+print(array2)                       # diplay the array
+print(array2.index(30))             # displays the index of the value asked.
 
-def launchshell():
-    os.system("Robocopy " + srcname + " " + desname + " *.* /s /e /xo")
-
-# Create the root window
-window = Tk()
-  
-# Set window title
-window.title('Robocopy')
-  
-# Set window size
-window.geometry("200x200")
-  
-#Set window background color
-window.config(background = "white")
-
-srcname = "C:\\Users\\kvinr\\Documents\\karthik\\Work\\Code\\Python\\RunTest\\src"
-desname = "C:\\Users\\kvinr\\Documents\\karthik\\Work\\Code\\Python\\RunTest\\des"
-
-# Create a File Explorer label
-label_file_explorer = Label(window, 
-                            text = "File Explorer - Tkinter",
-                            width = 20, height = 2, 
-                            fg = "blue")
-  
-      
-button_sourcefold = Button(window, 
-                        text = "Source Folder",
-                        command = browseFolderPath(srcname)) 
-
-button_destfold = Button(window, 
-                        text = "Dest Folder",
-                        command = browseFolderPath(desname)) 
-
-button_launchshell = Button(window,
-                        text = " Robocopy",
-                        command = launchshell)  
-
-
-button_exit = Button(window, 
-                     text = "Exit",
-                     command = exit) 
-  
-# Grid method is chosen for placing
-# the widgets at respective positions 
-# in a table like structure by
-# specifying rows and columns
-label_file_explorer.configure(text="File Opened:")
-label_file_explorer.grid(column = 1, row = 1)
-  
-button_sourcefold.grid(column = 1, row = 2)
-button_destfold.grid(column = 1, row = 3)
-button_launchshell.grid(column = 1, row = 4)  
-button_exit.grid(column = 1,row = 5)
-  
-# Let the window wait for any events
-window.mainloop()
+array2[2]=40                        # update the 2nd variable with value 40.
+for x in array2:                    # loop to display the array
+    print(x)
