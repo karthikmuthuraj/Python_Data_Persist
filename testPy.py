@@ -1,15 +1,17 @@
-# execution routine.
-from array import *
+# < reference > python_DATA_persistance_tutorial.pdf
+# < purpose > Driver ROUTINE.
 
-print("ARRAYs")
-print('------')
-# basic operations of an array
-# Traverse / insertion / deletion / search / update
+import myDefs
 
-array2= array('i', [10,20,30])      # define an array
-print(array2)                       # diplay the array
-print(array2.index(30))             # displays the index of the value asked.
+print("IN:")
+print("---")
 
-array2[2]=40                        # update the 2nd variable with value 40.
-for x in array2:                    # loop to display the array
-    print(x)
+# test1 = myDefs.readLine()
+test2 = myDefs.readandwriteFile()
+
+print("OUT:")
+print("----")
+
+# print(test1)
+if (test2 == "SUCCESS"):
+    print ("file Read-Write SuCCESS \n")
