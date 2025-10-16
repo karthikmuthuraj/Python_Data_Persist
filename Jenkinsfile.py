@@ -2,13 +2,12 @@ pipeline {
     agent any
     environment {
         PATH = "C:\\WINDOWS\\SYSTEM32"
-        PYTHONPATH = "C:\\Python312"
     }
 
     stages {
         stage('Build') {
             steps {
-                echo 'hello build...'
+                bat 'pyrun.bat'
             }
         }
     }    
