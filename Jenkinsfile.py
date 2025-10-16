@@ -1,7 +1,7 @@
 pipeline {
     agent any
         stages {
-            stage('testPy') {
+            stage('Build') {
                 steps {
                     bat 'python .\testPy.py'
                 }
