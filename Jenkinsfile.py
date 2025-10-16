@@ -3,7 +3,7 @@ pipeline {
         stages {
             stage('Build') {
                 steps {
-                    powershell 'python testPy.py'
+                    bat  "pyrun.bat"
                 }
             }
         }    
