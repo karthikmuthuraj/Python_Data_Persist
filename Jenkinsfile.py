@@ -1,10 +1,14 @@
 pipeline {
     agent any
-        stages {
-            stage('Build') {
-                steps {
-                    bat  "pyrun.bat"
-                }
+    environment {
+        PATH = "C:\\WINDOWS\\SYSTEM32"
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                bat 'pyrun.bat'
             }
-        }    
+        }
+    }    
 }
