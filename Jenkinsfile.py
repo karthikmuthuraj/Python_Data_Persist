@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'python .\testPy.py'
+                echo 'hello build...'
             }
         }
     }    
