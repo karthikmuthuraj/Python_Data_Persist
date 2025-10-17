@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = "C:\\WINDOWS\\SYSTEM32"
+        PATH = 'C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/python.exe'
     }
 
     stages {
