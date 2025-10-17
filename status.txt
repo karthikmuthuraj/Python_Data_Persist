@@ -1,0 +1,8 @@
+< 17-10-2025 >
+	< Jenkinsfile>
+	    1. userid:  Admin  /   pwd:  Admin@123
+		2. Could not launch python. seems to be an issue with environmnet settings
+		3. few things to check 
+		    3.1. how to set environmnet variables in jenkinsfile ?
+			3.2. what is the purpose and stucture of jenkinsfile ?
+			3.3. how to use shining panda jenkins.
