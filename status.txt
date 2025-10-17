@@ -1,0 +1,7 @@
+< 17-10-2025 >
+	< Jenkinsfile>
+	    Could not launch python. seems to be an issue with environmnet settings
+		few things to check 
+		      1. how to set environmnet variables in jenkinsfile ?
+			  2. what is the purpose and stucture of jenkinsfile ?
+			  3. how to use shining panda jenkins.
