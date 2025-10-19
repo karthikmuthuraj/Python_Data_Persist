@@ -1,7 +1,13 @@
 # < reference > python_DATA_persistance_tutorial.pdf
 # < purpose > routine for collating Functions in one file
+import csv
 import sys
 import os
+
+# declarations in general
+persons = [ ('John', 'Doe', 28),
+            ('Jane', 'Smith', 34),  
+            ('Emily', 'Jones', 22) ]
 
 def readLine():
     print("Enter the text: ")
@@ -27,3 +33,13 @@ def readandwriteFile_OS():
 
     return "SUCCESS"
 
+def writeCSV():
+    # define an output CSV file to store results.
+    with open('OUT\\CSV_Outfile.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        for person in persons:
+            writer.writerow(person)
+
+    file.close()
+
+    return "SUCCESS"
