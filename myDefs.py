@@ -1,8 +1,14 @@
 # < reference > python_DATA_persistance_tutorial.pdf
 # < purpose > routine for collating Functions in one file
 import csv
+import csv
 import sys
 import os
+
+# declarations in general
+persons = [ ('John', 'Doe', 28),
+            ('Jane', 'Smith', 34),  
+            ('Emily', 'Jones', 22) ]
 
 # declarations in general
 persons = [ ('John', 'Doe', 28),
