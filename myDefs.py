@@ -10,11 +10,6 @@ persons = [ ('John', 'Doe', 28),
             ('Jane', 'Smith', 34),  
             ('Emily', 'Jones', 22) ]
 
-# declarations in general
-persons = [ ('John', 'Doe', 28),
-            ('Jane', 'Smith', 34),  
-            ('Emily', 'Jones', 22) ]
-
 def readLine():
     print("Enter the text: ")
     return sys.stdin.readline()
