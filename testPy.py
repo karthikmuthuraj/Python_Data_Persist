@@ -19,9 +19,11 @@ test1 = myDefs.readandwriteFile()
 outtime1 = time.time()
 
 
+
 test3 = myDefs.writeCSV()
 '''
 test4 = myDefs.readCSV()
+
 
 print("OUT:")
 print("----")
@@ -47,3 +49,4 @@ if (test3 == "SUCCESS"):
 '''
 if (test4 == "SUCCESS"):
     print ("CSVREAD: SUCCESS")  
+
