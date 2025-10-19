@@ -7,6 +7,8 @@ import time
 print("IN:")
 print("---")
 
+'''
+
 # test1 = myDefs.readLine()
 intime0 = time.time()
 test0 = myDefs.readandwriteFile()
@@ -16,8 +18,15 @@ intime1 = time.time()
 test1 = myDefs.readandwriteFile()
 outtime1 = time.time()
 
+
+test3 = myDefs.writeCSV()
+'''
+test4 = myDefs.readCSV()
+
 print("OUT:")
 print("----")
+
+'''
 
 # print(test1)
 if (test0 == "SUCCESS"):
@@ -32,3 +41,9 @@ if ((outtime0-intime0) < (outtime1-intime1) ):
 else:
     print ("OS time function is faster")
 
+if (test3 == "SUCCESS"):
+    print ("CSVWRITE: SUCCESS")
+
+'''
+if (test4 == "SUCCESS"):
+    print ("CSVREAD: SUCCESS")  
