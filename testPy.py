@@ -18,10 +18,15 @@ intime1 = time.time()
 test1 = myDefs.readandwriteFile()
 outtime1 = time.time()
 
+<<<<<<< HEAD
 
 test3 = myDefs.writeCSV()
 '''
 test4 = myDefs.readCSV()
+=======
+'''
+test3 = myDefs.writeCSV()
+>>>>>>> e44dbf849e4f8624daa7f4fe36607f097afe6e7d
 
 print("OUT:")
 print("----")
@@ -41,9 +46,15 @@ if ((outtime0-intime0) < (outtime1-intime1) ):
 else:
     print ("OS time function is faster")
 
+<<<<<<< HEAD
 if (test3 == "SUCCESS"):
     print ("CSVWRITE: SUCCESS")
 
 '''
 if (test4 == "SUCCESS"):
     print ("CSVREAD: SUCCESS")  
+=======
+'''
+if (test3 == "SUCCESS"):
+    print ("CSVWRITE: SUCCESS")
+>>>>>>> e44dbf849e4f8624daa7f4fe36607f097afe6e7d
