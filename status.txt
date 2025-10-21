@@ -6,3 +6,10 @@
 		    3.1. how to set environmnet variables in jenkinsfile ?
 			3.2. what is the purpose and stucture of jenkinsfile ?
 			3.3. how to use shining panda jenkins.
+
+< 21-10-2025 >
+	< Githuib - Jenkins Webhook >
+		1. enabled jenkins trigger - github expecting a notification or new build automatic start.
+		   Did not work. Need to check.
+		   http://localhost:8080/job/Pyjob/configure
+	    2. NOW can iniitaite python code using powershell or bat . The evnnvironment variables are set right now.
