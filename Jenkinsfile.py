@@ -1,13 +1,9 @@
 pipeline {
     agent any
-    environment {
-        PATH = 'C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/python.exe'
-    }
-
     stages {
-        stage('Build') {
+        stage('Test Python Script') {
             steps {
-                sh 'pyrun.bat'
+                powershell 'python testPy.py'
             }
         }
     }    
