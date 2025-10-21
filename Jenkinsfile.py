@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test Python Script') {
             steps {
-                powershell 'python testPy.py'
+                bat 'python testPy.py'
             }
         }
     }    
