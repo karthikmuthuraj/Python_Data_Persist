@@ -1,6 +1,6 @@
 # < reference > python_DATA_persistance_tutorial.pdf
 # < purpose > routine for collating Functions in one file
-import csv
+
 import csv
 import sys
 import os
