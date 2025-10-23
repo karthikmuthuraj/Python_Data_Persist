@@ -1,1 +1,0 @@
-C:\Users\Admin\AppData\Local\Microsoft\WindowsApps\python.exe .\testPy.py
