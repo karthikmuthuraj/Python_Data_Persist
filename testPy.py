@@ -7,17 +7,19 @@ import sys
 import os
 
 # conditions to excute code blocks
-print(" Type CSV to execute CSV Module \n" \
-      " Type RWL to execute Read Write \n" \
-      " Type JSN to execute Json Module")
+print("Type CSV to Call CSV Module \n" \
+      "Type RWL to Call Read Write \n" \
+      "Type JSN to Call Json Module \n")
 
-module = input("Enter the text: ")
-
-print("IN:")
-print("---")
+module = input("Enter the Module Keyword: \t")
 
 if (module == "RWL"):
+    
+    # print("IN:")
+    # print("---")
+    
     # test1 = myDefs.readLine()
+    
     intime0 = time.time()
     test0 = myDefs.readandwriteFile()
     outtime0 = time.time()
@@ -31,17 +33,18 @@ elif (module == "CSV"):
     # test4 = myDefs.readCSV()
 
 elif (module == "JSN"):
-    print("JSON module to be written")
+    print("\nJSON module to be written")
 
 else:
-    print("Please Type the relevant keyword")
-
-
-print("OUT:")
-print("----")
+    print("\nCode EXIT : TYPE in the CORRECT keyword\n")
+    exit(0)
 
 if (module == "RWL"):
+
+    print("OUT:")
+    print("----")
     # print(test1)
+
     if (test0 == "SUCCESS"):
         print ("SIMPLE:TIME - file Read-Write : ",outtime0-intime0)
 
@@ -60,4 +63,10 @@ elif (module == "CSV"):
 
     # if (test4 == "SUCCESS"):
     #    print ("CSVREAD: SUCCESS")  
-    
+
+elif (module == "JSN"):
+    print("JSON module WRITTEN")
+
+else:
+    print("\nNo Specific Module Initiated")
+    exit(0)
