@@ -1,10 +1,18 @@
 pipeline {
     agent any
     stages {
-        stage('Test Python Script') {
+        stage('User Input') {
             steps {
-                powershell 'python testPy.py'
+                script {
+                    def userInput = input(message: 'Please enter a value:', ok: 'Proceed', submitter: 'admin')
+                    echo "User entered: ${userInput}"
+                }
             }
         }
+        // stage('Test Python Script') {
+        //    steps {
+        //        powershell 'python testPy.py'
+        //    }
+        // }
     }    
 }
