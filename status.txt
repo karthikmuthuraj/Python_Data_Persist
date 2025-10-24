@@ -1,3 +1,16 @@
+< 24-10-2025 >
+	< Python Addin >
+		1. VS reommends RainbowCSV as a CSV addin / import when we work with CSV files.
+	< issues to be investigated >
+		1. powershell could not be launched from Jenkinsfile.py to feed inputs.
+		2. Found a way to aaccept inputs as button option. but text input need to be investigated < if its really necessary >
+		3. < Github - Jenkins Webhook >
+			1. enabled jenkins trigger - github expecting a notification or new build automatic start. Did not work. Need to check.
+				http://localhost:8080/job/Pyjob/configure
+
+< 21-10-2025 >
+	1. NOW can iniitaite python code using powershell or bat . The environment variables are set right now.
+
 < 17-10-2025 >
 	< Jenkinsfile>
 	    1. userid:  Admin  /   pwd:  Admin@123
@@ -6,14 +19,3 @@
 		    3.1. how to set environmnet variables in jenkinsfile ?
 			3.2. what is the purpose and stucture of jenkinsfile ?
 			3.3. how to use shining panda jenkins.
-
-< 21-10-2025 >
-	< Githuib - Jenkins Webhook >
-		1. enabled jenkins trigger - github expecting a notification or new build automatic start.
-		   Did not work. Need to check.
-		   http://localhost:8080/job/Pyjob/configure
-	    2. NOW can iniitaite python code using powershell or bat . The evnnvironment variables are set right now.
-
-< 24-10-2025 >
-	< Python Addin >
-		1. VS reommends RainbowCSV as a CSV addin / import when we work with CSV files.
