@@ -6,14 +6,18 @@ import time
 import sys
 import os
 
+'''
+print(f"Script Name: ")
 # conditions to excute code blocks
 print("Type CSV to Call CSV Module \n" \
       "Type RWL to Call Read Write \n" \
       "Type JSN to Call Json Module \n")
 
 module = input("Enter the Module Keyword: \t")
+'''
 
-if (module == "RWL"):
+
+if ({sys.argv[1]} == "RWL"):
     
     # print("IN:")
     # print("---")
@@ -33,18 +37,18 @@ if (module == "RWL"):
     test1 = myDefs.readandwriteFile()
     outtime1 = time.time()
 
-elif (module == "CSV"):
+elif ({sys.argv[1]} == "CSV"):
     test3 = myDefs.writeCSV()
     # test4 = myDefs.readCSV()
 
-elif (module == "JSN"):
+elif ({sys.argv[1]} == "JSN"):
     print("\nJSON module to be written")
 
 else:
     print("\nCode EXIT : TYPE in the CORRECT keyword\n")
     exit(0)
 
-if (module == "RWL"):
+if ({sys.argv[1]} == "RWL"):
 
     print("OUT:")
     print("----")
@@ -66,14 +70,14 @@ if (module == "RWL"):
     else:
         print ("OS time function is faster")
 
-elif (module == "CSV"):
+elif ({sys.argv[1]} == "CSV"):
     if (test3 == "SUCCESS"):
         print ("CSVWRITE: SUCCESS")
 
     # if (test4 == "SUCCESS"):
     #    print ("CSVREAD: SUCCESS")  
 
-elif (module == "JSN"):
+elif ({sys.argv[1]} == "JSN"):
     print("JSON module WRITTEN")
 
 else:

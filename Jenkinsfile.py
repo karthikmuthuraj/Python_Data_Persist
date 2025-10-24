@@ -10,11 +10,10 @@ pipeline {
                 }
             }
         }
-        // stage('Test Python Script') {
-        //    steps {
-        //        powershell 'python testPy.py'
-        //    }
-        // }
+        stage('Test Python Script') {
+            steps {
+                powershell "python testPy.py ${env.selected_module}"
+            }
+        }
     }    
 }
-s
