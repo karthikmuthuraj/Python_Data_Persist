@@ -4,19 +4,17 @@ pipeline {
       stage('Select Environment to Deploy') {
         steps {
               script {
-                env.selected_environment = input  message: 'Select environment to Deploy',ok : 'Proceed',id :'tag_id',
-                parameters:[choice(choices: ['DEV', 'QA', 'STAGING', 'PROD'], description: 'Select environment', name: 'env')]
+                env.selected_environment = input  message: 'Select Module to Build',ok : 'Proceed',id :'tag_id',
+                parameters:[choice(choices: ['CSV', 'JSN', 'RWL'], description: 'Select Module', name: 'env')]
                 echo "Deploying in ${env.selected_environment}."
                 }
             }
         }
-
-        '''
-         stage('Test Python Script') {
-            steps {
-                powershell 'python testPy.py'
-            }
-         }
-        '''
+        
+        // stage('Test Python Script') {
+        //    steps {
+        //        powershell 'python testPy.py'
+        //    }
+        // }
     }    
 }
