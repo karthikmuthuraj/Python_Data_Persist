@@ -17,7 +17,7 @@ def readLine():
 def readandwriteFile():
     with open("IN\\file_inp.txt", "r+") as f:   # r+ amd w+ facilitates read and write operations when files are open
         content = f.readlines()                 #   so, no need to close the file before opening another file in parallel
-        g = open("OUT\\file_out.txt", "w+")     
+        g = open("file_out.txt", "w+")     
         g.writelines(content)
     g.close()
 
@@ -28,7 +28,7 @@ def readandwriteFile_OS():
     content = os.read(f,100)                 
     os.close(f)
     
-    g = os.open("OUT\\file_out.txt", os.O_WRONLY | os.O_CREAT)     
+    g = os.open("file_out.txt", os.O_WRONLY | os.O_CREAT)     
     os.write(g,content)
     os.close(g)
 
