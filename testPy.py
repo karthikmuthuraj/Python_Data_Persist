@@ -18,7 +18,12 @@ if (module == "RWL"):
     # print("IN:")
     # print("---")
     
+    
+    # print("IN:")
+    # print("---")
+    
     # test1 = myDefs.readLine()
+    
     
     intime0 = time.time()
     test0 = myDefs.readandwriteFile()
@@ -43,7 +48,11 @@ if (module == "RWL"):
 
     print("OUT:")
     print("----")
+
+    print("OUT:")
+    print("----")
     # print(test1)
+
 
     if (test0 == "SUCCESS"):
         print ("SIMPLE:TIME - file Read-Write : ",outtime0-intime0)
