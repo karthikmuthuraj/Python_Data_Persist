@@ -1,23 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('User Input Stage') {
-            steps {
-                script {
-                    def userInput = input(
-                        id: 'deploymentDetails',
-                        message: 'Provide deployment details:',
-                        parameters: [
-                            [$class: 'StringParameterDefinition', name: 'environment', defaultValue: 'dev', description: 'Target environment'],
-                            [$class: 'ChoiceParameterDefinition', name: 'version', choices: ['1.0', '1.1', '2.0'].join('\n'), description: 'Select application version']
-                        ]
-                    )
-                    echo "Deploying to environment: ${userInput.environment}"
-                    echo "Deploying version: ${userInput.version}"
-                    // Use userInput.environment and userInput.version in subsequent steps
+      stage('Select Environment to Deploy') {
+        steps {
+              script {
+                env.selected_environment = input  message: 'Select environment to Deploy',ok : 'Proceed',id :'tag_id',
+                parameters:[choice(choices: ['DEV', 'QA', 'STAGING', 'PROD'], description: 'Select environment', name: 'env')]
+                echo "Deploying in ${env.selected_environment}."
                 }
             }
         }
+
         '''
          stage('Test Python Script') {
             steps {
