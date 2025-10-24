@@ -8,16 +8,12 @@ import os
 
 '''
 print(f"Script Name: ")
-'''
-print(f"Script Name: ")
 # conditions to excute code blocks
 print("Type CSV to Call CSV Module \n" \
       "Type RWL to Call Read Write \n" \
       "Type JSN to Call Json Module \n")
 
 module = input("Enter the Module Keyword: \t")
-'''
-
 '''
 
 
