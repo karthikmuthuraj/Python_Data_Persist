@@ -16,8 +16,7 @@ print("Type CSV to Call CSV Module \n" \
 module = input("Enter the Module Keyword: \t")
 '''
 
-
-if ({sys.argv[1][3:0]}== "RWL"):
+if (str(sys.argv[1])== "RWL"):
     
     # print("IN:")
     # print("---")
@@ -37,18 +36,18 @@ if ({sys.argv[1][3:0]}== "RWL"):
     test1 = myDefs.readandwriteFile()
     outtime1 = time.time()
 
-elif ({sys.argv[1][3:0]} == "CSV"):
+elif (str(sys.argv[1]) == "CSV"):
     test3 = myDefs.writeCSV()
     # test4 = myDefs.readCSV()
 
-elif ({sys.argv[1][3:0]} == "JSN"):
+elif (str(sys.argv[1]) == "JSN"):
     print("\nJSON module to be written")
 
 else:
     print("\nCode EXIT : TYPE in the CORRECT keyword\n")
     exit(0)
 
-if ({sys.argv[1][3:0]} == "RWL"):
+if (str(sys.argv[1]) == "RWL"):
 
     print("OUT:")
     print("----")
@@ -70,14 +69,14 @@ if ({sys.argv[1][3:0]} == "RWL"):
     else:
         print ("OS time function is faster")
 
-elif ({sys.argv[1][3:0]} == "CSV"):
+elif (str(sys.argv[1]) == "CSV"):
     if (test3 == "SUCCESS"):
         print ("CSVWRITE: SUCCESS")
 
     # if (test4 == "SUCCESS"):
     #    print ("CSVREAD: SUCCESS")  
 
-elif ({sys.argv[1][3:0]} == "JSN"):
+elif (str(sys.argv[1]) == "JSN"):
     print("JSON module WRITTEN")
 
 else:
