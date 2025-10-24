@@ -36,7 +36,7 @@ def readandwriteFile_OS():
 
 def writeCSV():
     # define an output CSV file to store results.
-    with open('OUT\\CSV_Outfile.csv', mode='w', newline='') as file:
+    with open('OUT\\CSV_Outfile.csv', mode='w+', newline='') as file:
         writer = csv.writer(file)
         for person in persons:
             writer.writerow(person)
@@ -46,7 +46,7 @@ def writeCSV():
     return "SUCCESS"
 
 def readCSV():
-    with open('OUT\\CSV_Outfile.csv', mode='r') as file:
+    with open('OUT\\CSV_Outfile.csv', mode='r+') as file:
         reader = csv.reader(file)
         for row in reader:
             print(row)
