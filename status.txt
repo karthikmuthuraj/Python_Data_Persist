@@ -13,3 +13,7 @@
 		   Did not work. Need to check.
 		   http://localhost:8080/job/Pyjob/configure
 	    2. NOW can iniitaite python code using powershell or bat . The evnnvironment variables are set right now.
+
+< 24-10-2025 >
+	< Python Addin >
+		1. VS reommends RainbowCSV as a CSV addin / import when we work with CSV files.
