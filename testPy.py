@@ -6,28 +6,16 @@ import time
 import sys
 import os
 
-'''
-print(f"Script Name: ")
-# conditions to excute code blocks
-print("Type CSV to Call CSV Module \n" \
-      "Type RWL to Call Read Write \n" \
-      "Type JSN to Call Json Module \n")
-
-module = input("Enter the Module Keyword: \t")
-'''
+if len(sys.argv) > 1:
+    print(f"Arguments passed: {sys.argv[1:]}")
+else:
+    print(f"No arguments passed.")
+    exit(0)
 
 if (str(sys.argv[1])== "RWL"):
     
-    # print("IN:")
-    # print("---")
-    
-    
-    # print("IN:")
-    # print("---")
-    
     # test1 = myDefs.readLine()
-    
-    
+   
     intime0 = time.time()
     test0 = myDefs.readandwriteFile()
     outtime0 = time.time()
@@ -49,13 +37,7 @@ else:
 
 if (str(sys.argv[1]) == "RWL"):
 
-    print("OUT:")
-    print("----")
-
-    print("OUT:")
-    print("----")
     # print(test1)
-
 
     if (test0 == "SUCCESS"):
         print ("SIMPLE:TIME - file Read-Write : ",outtime0-intime0)
