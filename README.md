@@ -1,4 +1,8 @@
 Python Trials and Tests - python_data_persistance_tutorial.pdf
+
+- launch the code with arguments
+    eg:  python .\testPy.py CSV
+
 - few topics were not tested as a code >> as therortical understanding is purely enough.
     1. object serialisation : serves the purpose of converting an object's state into a 
                               format that can be stored or transmitted, and then later 
