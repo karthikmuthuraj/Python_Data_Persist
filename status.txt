@@ -5,9 +5,13 @@
 		1. powershell could not be launched from Jenkinsfile.py to feed inputs. < Done > 
 			1.1 Found a way to aaccept inputs as button option. but text input need to be investigated < if its really necessary > < Done >
 			1.2 The other option  is to pass arguments while launching python script using "SYS module" or " ARG Parse Module" < Done >
-		3. < Github - Jenkins Webhook >
-			1. enabled jenkins trigger - github expecting a notification or new build automatic start. Did not work. Need to check.
-				http://localhost:8080/job/Pyjob/configure
+		2. < Github - Jenkins Webhook >
+			2.1 enabled jenkins trigger - github expecting a notification or new build automatic start. Did not work. Need to check.
+				http://localhost:8080/job/Pyjob/configure  < Done using - ngrok , by creating a public IP for local host >
+
+				PUBLIC IP ==> https://unipolar-candance-ungaraged.ngrok-free.dev/
+				ngrok should be active - which acts like a server - which is installed in local machine.
+				the initial steps are available in NGROK website >> login : karthik.muthuraj@gmail.com / pwd: microsoft authenticator
 
 < 21-10-2025 >
 	1. NOW can iniitiate python code using powershell or bat . The environment variables are set right now.
